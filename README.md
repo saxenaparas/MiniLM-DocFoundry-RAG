@@ -1,9 +1,9 @@
-# MiniLM-DocFoundry-RAG — Local, CPU-only RAG (Windows-friendly)
+# 🤖 DocFoundry-RAG — Local, CPU-only RAG (Windows-friendly)
 
 **Author:** Paras Saxena  
 **Summary:** A fully offline **Retrieval-Augmented Generation (RAG)** pipeline that ingests **PDF / DOCX / TXT / MD** files, builds a **persistent vector index**, and answers questions **extractively with strict citations**—all on a Windows laptop, **no cloud keys**.
 
-This repo intentionally includes the **corpus**, the **persistent index**, and **generated outputs** so reviewers can run the CLI and verify answers quickly. Defaults (chunking, embedding model, vector store, refusal rules) align with the **embedded RAG Design Notes** at the end of this README. 
+>This repo intentionally includes the **corpus**, the **persistent index**, and **generated outputs** so reviewers can run the CLI and verify answers quickly. Defaults (chunking, embedding model, vector store, refusal rules) align with the **embedded RAG Design Notes** at the end of this README. 
 
 ---
 
@@ -34,14 +34,24 @@ This repo intentionally includes the **corpus**, the **persistent index**, and *
 ## 📦 Repository Layout
 
 ```
-MiniLM-DocFoundry-RAG/
+DocFoundry-RAG/
   README.md
   requirements.txt
   rag/
-    __init__.py  config.py  utils_io.py  ingest.py  chunk.py
-    embed.py     store.py   query.py     answer.py  evaluate.py
+    __init__.py  
+    config.py  
+    utils_io.py  
+    ingest.py  
+    chunk.py
+    embed.py     
+    store.py   
+    query.py     
+    answer.py  
+    evaluate.py
   scripts/
-    index_corpus.py  ask.py  evaluate_rag.py
+    index_corpus.py  
+    ask.py  
+    evaluate_rag.py
   data/
     corpus/                 # assignment documents (included)
     index/                  # persistent vector store (included)
