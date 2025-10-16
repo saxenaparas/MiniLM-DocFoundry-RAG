@@ -1,0 +1,15 @@
+# Core
+numpy
+scikit-learn
+pandas
+
+# Optional but preferred for better quality
+sentence-transformers
+torch
+
+# PDF/DOCX extractors (best-effort)
+PyPDF2
+python-docx
+
+# Primary vector store
+chromadb
