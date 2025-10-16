@@ -193,6 +193,7 @@ This repository implements the **Prototype of RAG system** as per the **Research
 ---
 
 # 📜 Deep-Research Architecture (short, cited)
+> Here, is the full **Deep-Research Architecture Plan** for your refrence -> [**Research-RAG-Plan-PS.pdf**](https://github.com/saxenaparas/DocFoundry-RAG/blob/main/Research-RAG-plan-PS.pdf)
 
 **Goal.** A Windows, CPU-only, offline RAG that stays grounded to your local corpus, returns **extractive answers with strict citations**, and cleanly refuses when evidence is weak.
 
