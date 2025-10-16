@@ -1,6 +1,4 @@
----
-
-# Paras_Saxena_Task2 — Local, CPU-only RAG (Windows-friendly)
+# MiniLM-DocFoundry-RAG — Local, CPU-only RAG (Windows-friendly)
 
 **Author:** Paras Saxena  
 **Summary:** A fully offline **Retrieval-Augmented Generation (RAG)** pipeline that ingests **PDF / DOCX / TXT / MD** files, builds a **persistent vector index**, and answers questions **extractively with strict citations**—all on a Windows laptop, **no cloud keys**.
@@ -36,7 +34,7 @@ This repo intentionally includes the **corpus**, the **persistent index**, and *
 ## 📦 Repository Layout
 
 ```
-Paras_Saxena_Task2/
+MiniLM-DocFoundry-RAG/
   README.md
   requirements.txt
   rag/
