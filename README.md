@@ -1,4 +1,4 @@
-# 🤖 DocFoundry-RAG — Local, CPU-only RAG (Windows-friendly)
+#  DocFoundry-RAG — Local, CPU-only RAG (Windows-friendly)
 
 **Author:** Paras Saxena  
 **Summary:** A fully offline **Retrieval-Augmented Generation (RAG)** pipeline that ingests **PDF / DOCX / TXT / MD** files, builds a **persistent vector index**, and answers questions **extractively with strict citations**—all on a Windows laptop, **no cloud keys**.
@@ -7,7 +7,7 @@
 
 ---
 
-## ✨ Features
+##  Features
 
 * **Local & offline:** No API keys or internet required.
 * **Multi-format ingestion:** PDF, DOCX, TXT, MD → normalized text with file/page metadata.
@@ -20,7 +20,7 @@
 
 ---
 
-## 🧱 Architecture (high level)
+##  Architecture (high level)
 
 1. **Ingest** → read PDFs/DOCX/TXT/MD, normalize text, attach `{source_path, page}`.
 2. **Chunk** → sentence-aware packing into **~800–1000 tokens** with **~100 overlap**.
@@ -31,7 +31,7 @@
 
 ---
 
-## 📦 Repository Layout
+##  Repository Layout
 
 ```
 DocFoundry-RAG/
@@ -62,7 +62,7 @@ DocFoundry-RAG/
 
 ---
 
-## 🚀 Quick Start (Windows / CPU-only)
+##  Quick Start (Windows / CPU-only)
 
 1. **Create a virtual environment**
 
@@ -125,7 +125,7 @@ python scripts\evaluate_rag.py ^
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 All tunables live in **`rag/config.py`**:
 
@@ -149,7 +149,7 @@ RANDOM_SEED = 42
 
 ---
 
-## 🛡️ Guardrails
+##  Guardrails
 
 * **Citation enforcement:** answers only use retrieved text; each output JSON includes `citations: [{source, page, chunk_id}]`. 
 * **Refusal handling:** if `max_cosine < 0.30`, return a **no-answer** object instead of guessing. 
@@ -157,7 +157,7 @@ RANDOM_SEED = 42
 
 ---
 
-## 🔍 What can be verify quickly
+##  What can be verify quickly
 
 * Run `index_corpus.py` and confirm **N chunks** indexed.
 * Run `ask.py` and open `outputs/*.json` to see **answer_text** + **citations**.
@@ -166,7 +166,7 @@ RANDOM_SEED = 42
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 * **Windows “symlinks disabled” warning (HF cache):** harmless. To silence:
 
@@ -179,20 +179,20 @@ RANDOM_SEED = 42
 
 ---
 
-## 🧭 Assignment alignment
+##  Assignment alignment
 
 This repository implements the **Prototype of RAG system** as per the **Researched RAG Plan** requirements: a runnable local RAG prototype with ingestion, chunking strategy, embeddings/indexing, retrieval (+ optional rerank), guardrails, evaluation metrics, and clear run steps. It also includes a short scalability note for **10× corpus growth** and **100+ concurrent users**. 
 
 ---
 
-## 📈 Scaling & Concurrency (beyond requirements)
+##  Scaling & Concurrency (beyond requirements)
 
 * **Bigger corpora (10×):** switch to ANN indices (FAISS/IVF or HNSW in Chroma) and batch embeddings.
 * **More users (100+ concurrent):** run as a local web service, preload models, add rate-limits & caching. 
 
 ---
 
-# 📜 Deep-Research Architecture (short, cited)
+#  Deep-Research Architecture (short, cited)
 > Here, is the full **Deep-Research Architecture Plan** for your refrence -> [**Research-RAG-Plan-PS.pdf**](https://github.com/saxenaparas/DocFoundry-RAG/blob/main/Research-RAG-plan-PS.pdf)
 
 **Goal.** A Windows, CPU-only, offline RAG that stays grounded to your local corpus, returns **extractive answers with strict citations**, and cleanly refuses when evidence is weak.
@@ -239,7 +239,7 @@ For **10× documents**, switch to ANN (FAISS or **HNSW in Chroma**) for faster s
 
 ---
 
-## 🔒 License & Data
+##  License & Data
 
 This repository contains **sample documents** and **derived artifacts** strictly for evaluation and learning. If you fork or reuse, ensure you have rights to redistribute your own documents and respect any proprietary content.
 
